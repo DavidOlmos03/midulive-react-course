@@ -1,4 +1,4 @@
-export function TwitterFollowCard({children, formatUserName, userName, name, isFollowing}) {
+export function TwitterFollowCard({children, formatUserName, userName = "unknown", name = "unknown", isFollowing = false}) {
     const imgSrc = "https://davidolmos-portfolio.netlify.app/assets/imgs/avatar.jpeg" 
     return (
     <article className="tw-followCard">
