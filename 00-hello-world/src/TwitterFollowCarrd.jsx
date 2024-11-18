@@ -1,4 +1,4 @@
-export function TwitterFollowCard({formatUserName,userName, name, isFollowing}) {
+export function TwitterFollowCard({children, formatUserName, userName, name, isFollowing}) {
     const imgSrc = "https://davidolmos-portfolio.netlify.app/assets/imgs/avatar.jpeg" 
     return (
     <article className="tw-followCard">
@@ -9,7 +9,7 @@ export function TwitterFollowCard({formatUserName,userName, name, isFollowing}) 
             alt="The avatar of Juan David Ruiz" 
             />
             <div className="tw-followCard-info">
-                <strong>{name}</strong>
+                <strong>{children || name}</strong>
                 <span 
                     className="tw-followCard-infoUserName"
                 >{formatUserName(userName)}</span>

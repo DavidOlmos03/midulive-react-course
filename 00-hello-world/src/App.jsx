@@ -12,10 +12,11 @@ export function App() {
        <TwitterFollowCard 
         formatUserName={formatUserName}
         userName="davidolmos"
-        name="Juan David Ruiz"
         isFollowing
-        />
-       <TwitterFollowCard 
+        >
+            <strong>Juan David Ruiz</strong>
+        </TwitterFollowCard>
+       <TwitterFollowCard
         formatUserName={formatUserName}
         userName="davidolmos"
         name="Juan David Ruiz"
