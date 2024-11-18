@@ -40,6 +40,7 @@
   }
   
   .tw-followCard-button:hover {
+    background-color: rgba(124, 162, 216, 0.648);
     opacity: .8;
   }
   

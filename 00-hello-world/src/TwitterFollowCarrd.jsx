@@ -1,5 +1,16 @@
-export function TwitterFollowCard({children, formatUserName, userName = "unknown", name = "unknown", isFollowing = false}) {
+import {useState} from "react";
+
+export function TwitterFollowCard({children, formatUserName, userName = "unknown", name = "unknown"}) {
+    
+    const [isFollowing, setIsFollowing] = useState(false) 
+    const text = isFollowing ? "Following" : "Follow"
+    const buttonClassName = isFollowing ? 'tw-followCard-button is-following' : 'tw-followCard-button'
     const imgSrc = "https://davidolmos-portfolio.netlify.app/assets/imgs/avatar.jpeg" 
+    
+    const handlerClick = () => {
+        setIsFollowing(!isFollowing)
+    }
+    
     return (
     <article className="tw-followCard">
         <header className="tw-followCard-header">
@@ -16,8 +27,8 @@ export function TwitterFollowCard({children, formatUserName, userName = "unknown
             </div>
         </header>
         <aside>
-            <button className="tw-followCard-button">
-                Follow
+            <button className={buttonClassName} onClick={handlerClick}>
+                {text}
             </button>
         </aside>
     </article>
